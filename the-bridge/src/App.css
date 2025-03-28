@@ -1,0 +1,135 @@
+/* General styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background flickering effect */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #000; /* Dark base color */
+    animation: flicker 2s infinite alternate;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    0% {
+        background: #000; /* Blackout */
+        box-shadow: inset 0 0 80px rgba(255, 255, 255, 0.1);
+    }
+
+    25% {
+        background: #111; /* Dim light */
+        box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.3);
+    }
+
+    50% {
+        background: #222; /* Brighter */
+        box-shadow: inset 0 0 150px rgba(255, 255, 255, 0.5);
+    }
+
+    75% {
+        background: #111; /* Dim again */
+        box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.3);
+    }
+
+    100% {
+        background: #000; /* Blackout again */
+        box-shadow: inset 0 0 80px rgba(255, 255, 255, 0.1);
+    }
+}
+
+.container {
+    text-align: center;
+    background: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #00ffea;
+    padding: 40px;
+    width: 80%;
+    max-width: 800px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #00ffea;
+    margin-bottom: 20px;
+}
+
+.puzzle-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+
+.node-container, .drop-zone {
+    width: 45%;
+    min-height: 300px;
+    border: 2px dashed #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.node {
+    padding: 15px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    text-align: center;
+    cursor: grab;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+    .node:hover {
+        transform: scale(1.1);
+    }
+
+.yellow {
+    background: #f0db4f;
+    color: #000;
+}
+
+.red {
+    background: #ff4c4c;
+}
+
+.blue {
+    background: #4c8cff;
+}
+
+.green {
+    background: #4cff4c;
+}
+
+.drop-zone .node {
+    cursor: default;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    background: #00ffea;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+    button:hover {
+        background: #00d4c4;
+        box-shadow: 0 0 10px #00ffea;
+    }
