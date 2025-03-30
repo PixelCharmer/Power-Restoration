@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-const correctOrder = ["Pink", "Purple", "Blue", "Yellow"];
+const correctOrder = ["Pink", "Blue", "Orange", "Red"];
 
 const App = () => {
     const [nodes, setNodes] = useState([
@@ -12,7 +12,6 @@ const App = () => {
         { id: 5, color: "Pink" },
         { id: 6, color: "Orange" },
         { id: 7, color: "Cyan" },
-        { id: 8, color: "Purple" },
     ]);
 
     const [dropZone, setDropZone] = useState([]);
@@ -40,7 +39,6 @@ const App = () => {
             { id: 5, color: "Pink" },
             { id: 6, color: "Orange" },
             { id: 7, color: "Cyan" },
-            { id: 8, color: "Purple" },
         ]);
         setDropZone([]);
     };
