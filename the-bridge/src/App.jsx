@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-const correctOrder = ["Yellow", "Red", "Blue", "Green"];
+const correctOrder = ["Pink", "Purple", "Blue", "Yellow"];
 
 const App = () => {
     const [nodes, setNodes] = useState([
@@ -9,6 +9,10 @@ const App = () => {
         { id: 2, color: "Red" },
         { id: 3, color: "Blue" },
         { id: 4, color: "Green" },
+        { id: 5, color: "Pink" },
+        { id: 6, color: "Orange" },
+        { id: 7, color: "Cyan" },
+        { id: 8, color: "Purple" },
     ]);
 
     const [dropZone, setDropZone] = useState([]);
@@ -33,13 +37,17 @@ const App = () => {
             { id: 2, color: "Red" },
             { id: 3, color: "Blue" },
             { id: 4, color: "Green" },
+            { id: 5, color: "Pink" },
+            { id: 6, color: "Orange" },
+            { id: 7, color: "Cyan" },
+            { id: 8, color: "Purple" },
         ]);
         setDropZone([]);
     };
 
     const checkSolution = () => {
         const isCorrect = dropZone.map((n) => n.color).join(",") === correctOrder.join(",");
-        alert(isCorrect ? "Power Restored!" : "Incorrect Sequence. Try Again!");
+        alert(isCorrect ? "Power Restored! Door Code:64831" : "Incorrect Sequence. Try Again!");
     };
 
     return (

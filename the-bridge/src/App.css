@@ -53,9 +53,14 @@ body {
     background: #1a1a1a;
     border-radius: 12px;
     box-shadow: 0 0 15px #00ffea;
-    padding: 40px;
-    width: 80%;
+    padding: 20px;
+    width: 100%;
     max-width: 800px;
+    height: 90vh; /* Set height to 90% of the viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto; /* Allow scrolling if content overflows */
 }
 
 h1 {
@@ -67,7 +72,9 @@ h1 {
 .puzzle-container {
     display: flex;
     justify-content: space-between;
-    margin: 30px 0;
+    margin: 20px 0;
+    width: 100%;
+    flex-grow: 1; /* Allow the container to grow and take available space */
 }
 
 .node-container, .drop-zone {
@@ -76,6 +83,9 @@ h1 {
     border: 2px dashed #fff;
     padding: 20px;
     border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Stack the nodes vertically within each container */
 }
 
 .node {
@@ -109,11 +119,30 @@ h1 {
     background: #4cff4c;
 }
 
+.pink {
+    background: #ff30b3;
+}
+
+.orange {
+    background: #f76714;
+}
+
+.cyan {
+    background: #05fad9;
+    color: #000;
+}
+
+.purple {
+    background: #ac0af2;
+}
+
 .drop-zone .node {
     cursor: default;
 }
 
 .buttons {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
 }
 
