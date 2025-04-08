@@ -13,7 +13,7 @@ body {
     height: 100vh;
     background: #000; /* Dark base color */
     animation: flicker 2s infinite alternate;
-    overflow: hidden;
+    overflow: auto;
     display: flex;
     justify-content: center;
     align-items: center;
