@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-const correctOrder = ["Pink", "Blue", "Orange", "Red"];
+const correctOrder = ["Orange", "Red", "Cyan", "Yellow"];
 
 const App = () => {
     const [nodes, setNodes] = useState([
@@ -45,7 +45,7 @@ const App = () => {
 
     const checkSolution = () => {
         const isCorrect = dropZone.map((n) => n.color).join(",") === correctOrder.join(",");
-        alert(isCorrect ? "Power Restored! Door Code:64831" : "Incorrect Sequence. Try Again!");
+        alert(isCorrect ? "Power Restored! Door Code:49305" : "Incorrect Sequence. Try Again!");
     };
 
     return (
